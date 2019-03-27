@@ -16,6 +16,12 @@ void line_up(double *max, double *mid, double *min) {
 			exchange(mid, max);
 		}
 	}
+	else if (*max < *mid) {
+		exchange(max, mid);
+	}
+	else if (*mid < *min) {
+		exchange(mid, min);
+	}
 }
 
 int main() {

@@ -8,19 +8,25 @@ public:
 		*b = buf;
 	}
 
-void line_up(double *max, double *mid, double *min) {
-	if (*max < *min) {
-		exchange(max, min);
-		if (*mid < *min) {
+	void line_up(double *max, double *mid, double *min) {
+		if (*max < *min) {
+			exchange(max, min);
+			if (*mid < *min) {
+				exchange(mid, min);
+			}
+			if (*mid > *max) {
+				exchange(mid, max);
+			}
+		}
+		else if (*max < *mid) {
+			exchange(max, mid);
+		}
+		else if (*mid < *min) {
 			exchange(mid, min);
 		}
-		if (*mid > *max) {
-			exchange(mid, max);
-		}
 	}
-}
 
-
+};
 int main() {
 	double max, mid, min;
 	Change c;
