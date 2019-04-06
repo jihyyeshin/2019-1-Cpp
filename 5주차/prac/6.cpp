@@ -13,6 +13,5 @@ int main() {
 		for (int i = str.length() - 1; i >= 0; i--)
 			cout << str[i];
 		cout << endl;
-		//cout << str << endl;//변경된 값을 출력
 	}
 }

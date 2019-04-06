@@ -14,4 +14,4 @@ int main() {
 	}
 	cout << "면적이 100보다 큰 원의 개수는 " << count << "개 이다." << endl;
 	return 0;
-}a
+}
