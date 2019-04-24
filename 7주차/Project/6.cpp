@@ -17,4 +17,5 @@ int main() {
 	cout << "\n배열 x[]에서 y[]를 뺀 결과를 출력한다. 개수는 " << ret << endl;
 	for (int i = 0; i < ret; i++)
 		cout << reArr[i]<<' ';
+	cout << endl;
 }
