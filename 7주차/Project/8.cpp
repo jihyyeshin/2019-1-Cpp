@@ -2,18 +2,18 @@
 #include <string>
 using namespace std;
 
-class DebugInfo { // 하나의 디버깅 정보 저장
+class DebugInfo {
 public:
-	string tag; // 개발자 스스로 디버깅 정보를 구분하기위한 태그
-	string comment; // 개발자가 기록하는 디버깅 정보
+	string tag;
+	string comment;
 };
 class Trace {
-	Trace() {} // private으로 하여 외부에서는 Trace 객체를 생성할 수 없게 함
-	static int index; // info 배열에 기록할 다음 위치
-	static DebugInfo info[1000]; // 최대 1000 개의 디버깅 정보를 담는다.
+	Trace() {}
+	static int index;
+	static DebugInfo info[1000];
 public:
 	static void put(string tag, string comment);
-	static void print(string tag = ""); // tag에 해당하는 디버깅 정보 출력
+	static void print(string tag = "");
 };
 
 void Trace::put(string tag, string comment) {
@@ -29,7 +29,7 @@ void Trace::put(string tag, string comment) {
 }
 
 void Trace::print(string tag) {
-	if (tag.length() == 0) { // 모든 태그의 Trace 출력
+	if (tag.length() == 0) {
 		cout << "----- 모든 Trace 정보를 출력합니다. -----" << endl;
 		for (int i = 0; i<index; i++) {
 			DebugInfo a = info[i];
@@ -45,9 +45,9 @@ void Trace::print(string tag) {
 		}
 	}
 }
-
-int Trace::index = 0; // 초기화 반드시 필요
-DebugInfo Trace::info[1000]; // 초기화 반드시 필요
+//초기화
+int Trace::index = 0;
+DebugInfo Trace::info[1000];
 
 void f() {
 	int a, b, c;
@@ -61,7 +61,7 @@ void f() {
 int main() {
 	Trace::put("main()", "프로그램 시작합니다");
 	f();
-	Trace::put("main()", "종료"); // put()의 첫 번째 매개 변수는 태그이고 두 번째 매개변수는 디버깅 정보이다.
-	Trace::print("f()"); // "f()" 태그를 가진 디버깅 정보를 모두 출력한다.
-	Trace::print(); // 모든 디버깅 정보를 출력한다.
+	Trace::put("main()", "종료");
+	Trace::print("f()");
+	Trace::print();
 }
