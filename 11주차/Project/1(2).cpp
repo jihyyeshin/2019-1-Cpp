@@ -1,7 +1,4 @@
-#include<iostream>
-#include<string>
-#include"1.h"
-using namespace std;
+#include"1(2).h"
 
 int main() {
 	Book a("รปรแ", 20000, 300), b("นฬทก", 30000, 500);

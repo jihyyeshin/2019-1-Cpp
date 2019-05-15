@@ -9,7 +9,7 @@ public:
 		this->radius = radius;
 	}
 	void show() {
-		cout << "radius = " << radius << " 인 원" << endl;
+		cout << "radius = " << radius << "인 원" << endl;
 	}
 	friend Circle& operator++(Circle& op1);
 	friend Circle operator++(Circle& op1, int x);

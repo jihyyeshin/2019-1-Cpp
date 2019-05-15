@@ -9,7 +9,7 @@ int main() {
 
 	Color fuchsia(255, 0, 255);
 	if (c == fuchsia)
-		cout << "보라색 맞음";
+		cout << "보라색 맞음"<<endl;
 	else
-		cout << "보라색 아님";
+		cout << "보라색 아님"<<endl;
 }

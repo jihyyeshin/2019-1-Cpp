@@ -1,5 +1,5 @@
 #include<iostream>
-#include"2.h"
+#include"2(2).h"
 using namespace std;
 int main() {
 	Book a("명품 C++", 30000, 500), b("고품 C++", 30000, 500);

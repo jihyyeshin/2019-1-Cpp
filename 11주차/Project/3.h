@@ -19,5 +19,4 @@ public:
 bool Book::operator!() {
 	if (this->price == 0)return true;
 	else return false;
-	// 주의  !(a) 값 자체를 리턴한다.
 }

@@ -11,7 +11,6 @@ public:
 		maxNum = 10;
 		list = new int[10];
 	}
-	//<<연산자는 두번수행을 위해 
 	Stack& operator<<(int push) {
 		if (top == maxNum - 1)
 			cout << "full" << endl;
